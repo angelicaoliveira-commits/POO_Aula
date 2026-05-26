@@ -40,6 +40,9 @@ public class Livro {
         return preco;
     }
     public void setPreco(double preco){
+        if(preco<0){
+            throw new IllegalArgumentException("O preço não pode ser negativo");
+        }
         this.preco = preco;
     }
     @Override
